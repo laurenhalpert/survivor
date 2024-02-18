@@ -1,131 +1,175 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Link from "next/link";
+import Image from "next/image";
+import React, { useState } from 'react';
+import Layout, { siteTitle, tribeName } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 
 export default function Home() {
+  const [tribe, setTribe] = useState("");
+
+  function handleClick(e){
+    setTribe(e.target.text)
+  }
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+      <section className={utilStyles.subHeading}>
+        <p>18 people. 26 days. 1 survivor.</p>
+      </section>
+      {/* <section>
+        <Link className={utilStyles.nav} href="/tribes/green" onClick={handleClick}>Green Tribe</Link>
+        <Link className={utilStyles.nav} href="/tribes/purple" onClick={handleClick}>Purple Tribe</Link>
+        <Link className={utilStyles.nav} href="/tribes/orange" onClick={handleClick}>Orange Tribe</Link>
+      </section> */}
+      <section>
+        <Image
+          priority
+          src="/images/q_burdette_800_0.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/jessica_chong_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/charlie_davis_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/tevin_davis_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/tiffany_nicole_ervin_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/moriah_gaynor_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/maria_gonzalez_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/bhanu_gopal_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/ben_katzman_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/david_jelinsky_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/jemila_hussain-adams_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/hunter_mcknight_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/randen_montalvo_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/tim_spicer_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/soda_thompson_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/venus_vafa_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/kenzie_petty_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+        <Image
+          priority
+          src="/images/liz_wilcox_800.jpg"
+          className={utilStyles.card}
+          height={108}
+          width={108}
+          alt=""
+        />
+      </section>
+    </Layout>
   );
 }
