@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
                 <Link className={utilStyles.nav} href="/tribes/purple" onClick={handleClick}>Purple Tribe</Link>
                 <Link className={utilStyles.nav} href="/tribes/orange" onClick={handleClick}>Orange Tribe</Link>
             </section>
-            {/* TODO: figure out why layout not applying to Draft Room...children problem? */}
+            
             <Link className={utilStyles.button} href="/draft_room">Draft Room</Link>
           </>
         ) : (

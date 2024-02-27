@@ -3,9 +3,8 @@ import Image from "next/image";
 import utilStyles from '../styles/utils.module.css';
 
 
-export default function Pool({ onPick }){
+export default function Pool({ contestants, onPick }){
 
-    
 
     function handleClick(e){
         console.log(e.target.id)
@@ -16,153 +15,21 @@ export default function Pool({ onPick }){
         <>
             <h1>Contestants</h1>
             <section>
-                <Image
-                priority
-                id="/images/q_burdette_800_0.jpg"
-                src="/images/q_burdette_800_0.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                onClick={handleClick}
-                />
-                <Image
-                priority
-                src="/images/jessica_chong_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/charlie_davis_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/tevin_davis_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/tiffany_nicole_ervin_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/moriah_gaynor_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/maria_gonzalez_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/bhanu_gopal_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/ben_katzman_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/david_jelinsky_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/jemila_hussain-adams_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/hunter_mcknight_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/randen_montalvo_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/tim_spicer_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/soda_thompson_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/venus_vafa_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/kenzie_petty_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
-                <Image
-                priority
-                src="/images/liz_wilcox_800.jpg"
-                className={utilStyles.card}
-                height={108}
-                width={108}
-                alt=""
-                />
+                {contestants.map((contestant)=>
+                    <Image
+                        priority
+                        id={contestant}
+                        src={contestant}
+                        key={contestant}
+                        alt={contestant}
+                        className={utilStyles.card}
+                        height={108}
+                        width={108}
+                        onClick={handleClick}
+                    />)
+                }
             </section>
+            
             
         </>
     )
