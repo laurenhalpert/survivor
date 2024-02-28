@@ -64,8 +64,15 @@
 
   .card {
     padding: 10px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    border-style: solid;
+    border-color: black;
+  }
+
+  .cardInfo {
+    padding: 10px;
   }
 
   .button {

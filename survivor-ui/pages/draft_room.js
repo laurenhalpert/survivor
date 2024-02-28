@@ -1,6 +1,9 @@
 import Pool from "../components/Pool"
 import Layout from "../components/layout"
 import Image from "next/image"
+
+import ContestantMiniCard from "../components/ContestantMiniCard"
+
 import React, {useState, useEffect } from "react"
 
 
@@ -10,49 +13,56 @@ export default function DraftRoom(){
     const [contestants, setContestants] = useState ([])
 
     
-    const [pic, setPic] = useState("")
+    const [contestant, setContestant] = useState({})
+
+    const [kirstinContestants, setKirstinContestants] =useState([])
+    const [laurenContestants, setLaurenContestants] = useState([])
+    const [markContestants, setMarkContestants] = useState([])
     
-    let contestantImages = contestants.map((contestant)=>contestant.image) 
     
+    
+    useEffect(()=>{
+    
+        fetch("http://127.0.0.1:5555/api/survivor_contestants")
+        .then(r=>r.json())
+        .then(contestants => {
+          
+          setContestants(contestants)
+          
+        })
+        
+      }, [])
 
-
-    // const contestantImages = [
-    //     "/images/ben_katzman_800.jpg",
-    //     "/images/bhanu_gopal_800.jpg",
-    //     "/images/charlie_davis_800.jpg",
-    //     "/images/david_jelinsky_800.jpg",
-    //     "/images/hunter_mcknight_800.jpg",
-    //     "/images/jemila_hussain-adams_800.jpg",
-    //     "/images/jessica_chong_800.jpg",
-    //     "/images/kenzie_petty_800.jpg",
-    //     "/images/liz_wilcox_800.jpg",
-    //     "/images/maria_gonzalez_800.jpg",
-    //     "/images/moriah_gaynor_800.jpg",
-    //     "/images/q_burdette_800_0.jpg",
-    //     "/images/randen_montalvo_800.jpg",
-    //     "/images/soda_thompson_800.jpg",
-    //     "/images/tevin_davis_800.jpg",
-    //     "/images/tiffany_nicole_ervin_800.jpg",
-    //     "/images/tim_spicer_800.jpg",
-    //     "/images/venus_vafa_800.jpg"
-    // ]
-
-    function onPick(image){
-        setPic(image)
+    // const contestantImages = contestants.map((contestant)=>contestant.image)
+    // console.log(contestantImages)
+    function onPick(contestant, team){
+        if (team === "Kirstin") {
+            setKirstinContestants([...kirstinContestants, contestant])
+        } else if (team === "Lauren") {
+            setLaurenContestants([...laurenContestants, contestant])
+        } else if (team === "Mark") {
+            setMarkContestants([...markContestants, contestant])
+        }
+        console.log(contestants)
+        const newPool = contestants.filter((poolContestant)=> poolContestant.name !== contestant.name)
+        setContestants(newPool)
+        console.log(kirstinContestants)
     }
 
     return(
         <Layout>
-            <Pool contestants={contestantImages} onPick={onPick}/>
+            <Pool contestants={contestants} onPick={onPick} />
             <section>
                 <h2>Kirstin's Tribe</h2>
-                <Image alt="" src={pic} height={144} width={144}/>
+                    <ContestantMiniCard contestants={kirstinContestants}/>
             </section>
             <section>
                 <h2>Lauren's Tribe</h2>
+                    <ContestantMiniCard contestants={laurenContestants}/>
             </section>
             <section>
                 <h2>Mark's Tribe</h2>
+                    <ContestantMiniCard contestants={markContestants}/>
             </section>
         </Layout>
        
