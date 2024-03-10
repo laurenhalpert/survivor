@@ -273,7 +273,7 @@ a_r_cons=[
         "bio": "Sunny Pulver (41) and Bizzy Smith (37), firefighters",
         "location": "Edgerton, WI & New Berlin, WI",
         "is_eliminated": False,
-        "image": "/images/yvonne_and_melissa.jpeg"
+        "image": "/images/sunny_and_bizzy.jpeg"
     },
     {
         "team_members": "Amber & Vinny",

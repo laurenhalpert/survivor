@@ -29,7 +29,7 @@ export default function ARContestantCard ( { contestant, contestants, onPick } )
                 priority
                 id={contestant.id}
                 src={contestant.image}
-                key={contestant.id}
+                key={contestant.team_members}
                 alt={contestant.team_members}
                 height={200}
                 width={200}

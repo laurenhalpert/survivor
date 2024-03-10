@@ -47,7 +47,7 @@ export default function ARDraftRoom(){
             setMarkContestants([...markContestants, contestant])
         }
         console.log(contestants)
-        const newPool = contestants.filter((poolContestant)=> poolContestant.name !== contestant.name)
+        const newPool = contestants.filter((poolContestant)=> poolContestant.team_members !== contestant.team_members)
         setContestants(newPool)
         console.log(kirstinContestants)
     }
