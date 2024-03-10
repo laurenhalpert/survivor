@@ -62,6 +62,8 @@ def create_records():
         AmazingRaceContestant(
             team_members=contestant["team_members"],
             relationship=contestant["relationship"],
+            bio=contestant["bio"],
+            location=contestant["location"],
             is_eliminated=contestant["is_eliminated"],
             image=contestant["image"]
         ) for contestant in a_r_cons

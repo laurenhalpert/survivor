@@ -228,9 +228,107 @@ tms= [
 
 a_r_cons=[
     {
-        "team_members": "L&L",
-        "relationship": "coworkers",
+        "team_members": "Derek & Shelisa",
+        "relationship": "Married",
+        "bio": "Derek (57, retired chief of police) and Shelisa Williams (55, retired sheriffs lieutenant)",
+        "location": "Alta Loma, CA",
         "is_eliminated": False,
-        "image": "https://wwwimage-tve.cbsstatic.com/thumbnails/photos/w425-q80/cast/ben_katzman_800.jpg"
-    }
+        "image": "/images/derek_and_shelisa.jpg"
+    },
+    {
+        "team_members": "Danny & Angie",
+        "relationship": "Mother and Son",
+        "bio": "Danny (27, university resident director) and Angie Butler (55, seventh grade teacher)",
+        "location": "San Diego, CA & Walla Walla, WA",
+        "is_eliminated": False,
+        "image": "/images/danny_and_angie_butler.jpg"
+    },
+    {
+        "team_members": "Rod & Leticia",
+        "relationship": "Married",
+        "bio": "Rod (46, former NFL player/owner of Gshred Supplements) and Leticia Gardner (38, fitness business owner). Rod has played for Washington, Carolina, Green Bay, and Kansas City",
+        "location": "Lawrenceville, GA",
+        "is_eliminated": False,
+        "image": "/images/rod_and_leticia.jpeg"
+    },
+    {
+        "team_members": "Michelle & Sean",
+        "relationship": "Married",
+        "bio": "Michelle (39) and Sean Clark (46), owners of Double Dutch Aerobics",
+        "location": "East Point, GA",
+        "is_eliminated": False,
+        "image": "/images/michelle_and_sean.jpeg"
+    },
+    {
+        "team_members": "Yvonne & Melissa",
+        "relationship": "Dating",
+        "bio": "Yvonne Chavez (40, global strategy and operations lead) and Melissa Main (38, investigator for U.S. Navy special operations)",
+        "location": "San Diego, CA",
+        "is_eliminated": False,
+        "image": "/images/yvonne_and_melissa.jpeg"
+    },
+    {
+        "team_members": "Sunny & Bizzy",
+        "relationship": "Best Friends",
+        "bio": "Sunny Pulver (41) and Bizzy Smith (37), firefighters",
+        "location": "Edgerton, WI & New Berlin, WI",
+        "is_eliminated": False,
+        "image": "/images/yvonne_and_melissa.jpeg"
+    },
+    {
+        "team_members": "Amber & Vinny",
+        "relationship": "Dating",
+        "bio": "Amber Craven (30) and Vinny Cagungun (37), nurse anesthetists",
+        "location": "Englewood, CO",
+        "is_eliminated": False,
+        "image": "/images/amber_and_vinny.jpeg"
+    },
+    {
+        "team_members": "Ricky & Cesar",
+        "relationship": "Dating",
+        "bio": "Ricky Rotandi (34, preschool teacher) and Cesar Aldrete (34, food stylist)",
+        "location": "New York, NY",
+        "is_eliminated": False,
+        "image": "/images/ricky_and_cesar.jpeg"
+    },
+    {
+        "team_members": "Juan & Shane",
+        "relationship": "Best Friends",
+        "bio": "Juan Villa (29) and Shane Bilek (29), Air Force pilots",
+        "location": "Spokane, WA & Marine City, MI",
+        "is_eliminated": False,
+        "image": "/images/ricky_and_cesar.jpeg"
+    },
+    {
+        "team_members": "Anthony & Bailey",
+        "relationship": "Twin Brothers",
+        "bio": "Anthony (26) and Bailey Smith (26), recruiters",
+        "location": "Clearwater, FL",
+        "is_eliminated": False,
+        "image": "/images/anthony_and_bailey.jpeg"
+    },
+    {
+        "team_members": "Kishori & Karishma",
+        "relationship": "Cousins",
+        "bio": "Kishori Turner (26, senior marketing strategist) and Karishma Cordero (22, student)",
+        "location": "Gaithersburg, MD & Austin, TX",
+        "is_eliminated": False,
+        "image": "/images/kishori_and_karishma.jpeg"
+    },
+    {
+        "team_members": "Maya & Rohan",
+        "relationship": "Siblings",
+        "bio": "Maya (20, student) and Rohan Mody (23, master’s student)",
+        "location": "Monmouth Junction, NJ",
+        "is_eliminated": False,
+        "image": "/images/maya_and_rohan.jpeg"
+    },
+    {
+        "team_members": "Chris & Mary",
+        "relationship": "Father and Daughter",
+        "bio": "Chris Foster (60, receptionist) and Mary Cardona-Foster (27, marketing manager)",
+        "location": "Waltham, MA",
+        "is_eliminated": False,
+        "image": "/images/chris_and_mary.jpeg"
+    },
 ]

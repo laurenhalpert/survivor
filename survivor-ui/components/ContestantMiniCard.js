@@ -12,13 +12,13 @@ export default function ContestantMiniCard ( { contestants } ){
                         priority
                         id={contestant.id}
                         src={contestant.image}
-                        key={contestant.id}
-                        alt={contestant.name}
+                        key={contestant.name? contestant.name: contestant.team_members}
+                        alt={contestant.name? contestant.name: contestant.team_members}
                         height={108}
                         width={108}
                         className={utilStyles.cardInfo}
                     />
-                    <h3 className={utilStyles.cardInfo}>{contestant.name}</h3>
+                    <h3 className={utilStyles.cardInfo}>{contestant.team_members}</h3>
                 </div>
             )}
         </div>

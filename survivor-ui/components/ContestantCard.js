@@ -29,7 +29,7 @@ export default function ContestantCard ( { contestant, contestants, onPick } ) {
                 id={contestant.id}
                 src={contestant.image}
                 key={contestant.id}
-                alt={contestant.name}
+                alt={contestant.name? contestant.name: contestant.team_members}
                 height={108}
                 width={108}
                 onClick={handleClick}
@@ -38,7 +38,7 @@ export default function ContestantCard ( { contestant, contestants, onPick } ) {
             <br></br>
             <h3 className={utilStyles.cardInfo}>{contestant.name}</h3>
             <h4 className={utilStyles.cardInfo}>{contestant.tribe}</h4>
-            <h4 className={utilStyles.cardInfo}>Occupation: {contestant.occupation}</h4>
+            <h4 className={utilStyles.cardInfo}>Bio: {contestant.occupation}</h4>
             <h4 className={utilStyles.cardInfo}>Hometown: {contestant.hometown}</h4>
             <h4 className={utilStyles.cardInfo}>Current Residence: {contestant.current_residence}</h4>
             <button className={utilStyles.button} onClick={makePick} value= "Kirstin">Kirstin</button>

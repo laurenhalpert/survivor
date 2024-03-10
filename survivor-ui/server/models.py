@@ -45,6 +45,8 @@ class Tribe (db.Model, SerializerMixin):
 class Team (db.Model, SerializerMixin):
     __tablename__="teams"
 
+    serialize_rules= ("-amazing_race_contestants")
+
     id=db.Column(db.Integer, primary_key=True)
     name=db.Column(db.String)
 
@@ -58,11 +60,13 @@ class Team (db.Model, SerializerMixin):
 class AmazingRaceContestant (db.Model, SerializerMixin):
     __tablename__="amazing_race_contestants"
 
-    serialize_rules= ('-team')
+    serialize_rules= ('-team', '-survivor_contestants', "-tribe")
 
     id=db.Column(db.Integer, primary_key=True)
     team_members=db.Column(db.String)
     relationship=db.Column(db.String)
+    bio=db.Column(db.String)
+    location=db.Column(db.String)
     is_eliminated=db.Column(db.Boolean)
     image=db.Column(db.String)
 
