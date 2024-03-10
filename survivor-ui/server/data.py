@@ -297,7 +297,7 @@ a_r_cons=[
         "bio": "Juan Villa (29) and Shane Bilek (29), Air Force pilots",
         "location": "Spokane, WA & Marine City, MI",
         "is_eliminated": False,
-        "image": "/images/ricky_and_cesar.jpeg"
+        "image": "/images/juan_and_shane.jpeg"
     },
     {
         "team_members": "Anthony & Bailey",
